@@ -1,3 +1,4 @@
+import 'package:app_pelicula/widget/widget.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -5,10 +6,24 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      body: Center(
-        child: Text('HomeScreen'),
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('Home Screen'),
+        elevation: 0,
+        centerTitle: true,
+        actions: [
+          IconButton(
+          onPressed: () {
+            
+          },
+           icon: const Icon(Icons.search_rounded))
+        ],
       ),
+      body: Column(
+        children: const [
+           CardSwiper(),
+        ],
+      )
     );
   }
 }
