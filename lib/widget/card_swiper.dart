@@ -1,5 +1,5 @@
-import 'package:card_swiper/card_swiper.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_swiper/flutter_swiper.dart';
 
 class CardSwiper extends StatelessWidget {
   const CardSwiper({Key? key}) : super(key: key);
@@ -21,8 +21,7 @@ class CardSwiper extends StatelessWidget {
         control: const SwiperControl(),
         itemBuilder: (BuildContext context, int index) {
           return const Image(
-            image: NetworkImage('https//via.placeholder.com/300x400')
-            );
+              image: NetworkImage('https//via.placeholder.com/300x400'));
         },
       ),
     );
