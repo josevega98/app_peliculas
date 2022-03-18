@@ -11,18 +11,32 @@ class HomeScreen extends StatelessWidget {
         title: const Text('Home Screen'),
         elevation: 0,
         centerTitle: true,
+        
         actions: [
           IconButton(
           onPressed: () {
-            
+          
           },
            icon: const Icon(Icons.search_rounded))
         ],
       ),
-      body: Column(
-        children: const [
-           CardSwiper(),
-        ],
+      body: SingleChildScrollView(
+        child: Column(
+          children: const [
+      
+            // tarjetas slider
+             CardSwiper(),
+      
+             //Movie Slider
+             MovieSlider(),
+             MovieSlider(),
+             MovieSlider(),
+             MovieSlider(),
+             MovieSlider()
+      
+      
+          ],
+        ),
       )
     );
   }

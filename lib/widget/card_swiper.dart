@@ -19,15 +19,19 @@ class CardSwiper extends StatelessWidget {
         itemHeight: size.height * 0.3,
         pagination: const SwiperPagination(),
         itemBuilder: (BuildContext context, int index) {
-          return ClipRRect(
-            borderRadius: BorderRadius.circular(20),
-            child: const FadeInImage(
-              placeholder: AssetImage('assets/no-image.jpg'),
-              image: NetworkImage(
-                  'https://www.oetker.es/Recipe/Recipes/oetker.es/es-es/gateaux/image-thumb__35524__RecipeDetailsLightBox/brownies-con-glaseado.jpg'),
-              fit: BoxFit.cover,
+
+          return GestureDetector(
+            onTap:  () => Navigator.pushNamed(context, 'deatils', arguments: 'movie'),
+            child: ClipRRect(
+              borderRadius: BorderRadius.circular(20),
+              child: const FadeInImage(
+                placeholder: AssetImage('assets/no-image.jpg'),
+                image: NetworkImage('https://i.blogs.es/942f78/spider-man-3-tom-holland_8m76/1366_2000.jpeg'),
+                fit: BoxFit.cover,
+              ),
             ),
           );
+
         },
       ),
     );

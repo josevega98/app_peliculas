@@ -1,3 +1,5 @@
+
+import 'package:app_pelicula/widget/widget.dart';
 import 'package:flutter/material.dart';
 
 class DetailsScreen extends StatelessWidget {
@@ -5,14 +7,25 @@ class DetailsScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final String? movie = ModalRoute.of(context)?.settings.arguments. toString() ?? 'no movie';
+
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Detalles'),
-        elevation: 0,
-      ),
-      body: Center(
-        child: Text('DetailsScreen'),
-      ),
+
+      body: CustomScrollView(
+
+        slivers: [
+
+          const CustomAppBar(),
+          SliverList(
+            delegate: SliverChildListDelegate([
+              const PosterTitle(),
+              const TextodownScreen(),
+          ]
+          )
+          ),
+        ]
+      )
     );
   }
 }
+
