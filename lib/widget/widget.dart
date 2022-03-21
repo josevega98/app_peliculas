@@ -4,3 +4,4 @@ export 'package:app_pelicula/widget/CustomAppBar.dart';
 export 'package:app_pelicula/widget/sliver_list.dart';
 export 'package:app_pelicula/widget/post_texto.dart';
 
+export 'package:app_pelicula/widget/postres_Cards.dart';

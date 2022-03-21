@@ -5,7 +5,6 @@ class MovieSlider extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final size = MediaQuery.of(context).size;
 
     return Container(
       width: double.infinity,
@@ -82,5 +81,7 @@ class _MoviePoster extends StatelessWidget {
     );
   }
 }
+
+
 
 

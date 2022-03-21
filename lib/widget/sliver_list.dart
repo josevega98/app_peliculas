@@ -28,13 +28,14 @@ class PosterTitle extends StatelessWidget {
                 Text('Postre.Tile', style: textheme.headline5),
                 Text('Sub Titulo', style: textheme.subtitle1),
                 Row(
+                  mainAxisAlignment: MainAxisAlignment.start,
                   children: [
                     const Icon(
                       Icons.star_border_outlined,
                       size: 25,
                       color: Colors.purple,
                     ),
-                    Text('Calificacion por clientes', style: textheme.caption)
+                    Text('Calificacion por clientes', style: textheme.caption),
                   ],
                 )
               ],

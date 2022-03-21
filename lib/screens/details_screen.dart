@@ -20,6 +20,8 @@ class DetailsScreen extends StatelessWidget {
             delegate: SliverChildListDelegate([
               const PosterTitle(),
               const TextodownScreen(),
+              const PosterTitle(),
+              
           ]
           )
           ),
